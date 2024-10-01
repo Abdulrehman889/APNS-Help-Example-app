@@ -1,19 +1,30 @@
-//
-//  AppDelegate.swift
-//  AppleNotificationExamples
-//
-//  Created by Muhammad Abdulrehman on 01/10/2024.
-//
-
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    func initnotificaioncenter() {
+        let notifications = UNUserNotificationCenter.current()
+        notifications.requestAuthorization(options: [.alert,.badge,.sound]) { errSecSuccess, error in
+            if errSecSuccess {
+                print("Notification Center Authorized")
+                notifications.delegate = self
+            } else {
+                print("Notification Center Authorization Failed")
+                
+            }
+            
+//            let actionButton = UNNotificationAction(identifier: "actionButton", title: "Action", options: [.foreground ])
+//            let deleteAction = UNNotificationAction(identifier: "deleteAction", title: "Delete", options: [.destructive])
+//            
+//            let notificationCategory = UNNotificationCategory(identifier: "myNotification Category", actions: [actionButton,deleteAction], intentIdentifiers: [], options: [])
+//            notifications.setNotificationCategories([notificationCategory])
+        }
+    }
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        initnotificaioncenter()
         return true
     }
 
@@ -25,12 +36,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
-    }
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {  }
 
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .sound,.list,.badge])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        switch response.actionIdentifier {
+//        case "actionButton":
+//            print("Open")
+//        case "deleteAction ":
+//            print("Close")
+//        default:
+//            print("this is error case")
+//        }
+        completionHandler()
+    }
+}

@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E73B614D2CAC3EAA00CD3F6F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73B614C2CAC3EAA00CD3F6F /* UserNotifications.framework */; };
+		E73B614F2CAC3EAA00CD3F6F /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73B614E2CAC3EAA00CD3F6F /* UserNotificationsUI.framework */; };
+		E73B61592CAC3EAA00CD3F6F /* MediaNotification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E73B614A2CAC3EAA00CD3F6F /* MediaNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E73B61292CAC3E5800CD3F6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +27,36 @@
 			remoteGlobalIDString = E73B61112CAC3E5600CD3F6F;
 			remoteInfo = AppleNotificationExamples;
 		};
+		E73B61572CAC3EAA00CD3F6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E73B610A2CAC3E5600CD3F6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E73B61492CAC3EAA00CD3F6F;
+			remoteInfo = MediaNotification;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E73B615E2CAC3EAA00CD3F6F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E73B61592CAC3EAA00CD3F6F /* MediaNotification.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E73B61122CAC3E5600CD3F6F /* AppleNotificationExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleNotificationExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73B61282CAC3E5800CD3F6F /* AppleNotificationExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleNotificationExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73B61322CAC3E5800CD3F6F /* AppleNotificationExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleNotificationExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73B614A2CAC3EAA00CD3F6F /* MediaNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MediaNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E73B614C2CAC3EAA00CD3F6F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		E73B614E2CAC3EAA00CD3F6F /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +66,13 @@
 				Info.plist,
 			);
 			target = E73B61112CAC3E5600CD3F6F /* AppleNotificationExamples */;
+		};
+		E73B615D2CAC3EAA00CD3F6F /* Exceptions for "MediaNotification" folder in "MediaNotification" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E73B61492CAC3EAA00CD3F6F /* MediaNotification */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -56,6 +93,14 @@
 		E73B61352CAC3E5800CD3F6F /* AppleNotificationExamplesUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AppleNotificationExamplesUITests;
+			sourceTree = "<group>";
+		};
+		E73B61502CAC3EAA00CD3F6F /* MediaNotification */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E73B615D2CAC3EAA00CD3F6F /* Exceptions for "MediaNotification" folder in "MediaNotification" target */,
+			);
+			path = MediaNotification;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -82,6 +127,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E73B61472CAC3EAA00CD3F6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E73B614F2CAC3EAA00CD3F6F /* UserNotificationsUI.framework in Frameworks */,
+				E73B614D2CAC3EAA00CD3F6F /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +145,8 @@
 				E73B61142CAC3E5600CD3F6F /* AppleNotificationExamples */,
 				E73B612B2CAC3E5800CD3F6F /* AppleNotificationExamplesTests */,
 				E73B61352CAC3E5800CD3F6F /* AppleNotificationExamplesUITests */,
+				E73B61502CAC3EAA00CD3F6F /* MediaNotification */,
+				E73B614B2CAC3EAA00CD3F6F /* Frameworks */,
 				E73B61132CAC3E5600CD3F6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,8 +157,18 @@
 				E73B61122CAC3E5600CD3F6F /* AppleNotificationExamples.app */,
 				E73B61282CAC3E5800CD3F6F /* AppleNotificationExamplesTests.xctest */,
 				E73B61322CAC3E5800CD3F6F /* AppleNotificationExamplesUITests.xctest */,
+				E73B614A2CAC3EAA00CD3F6F /* MediaNotification.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E73B614B2CAC3EAA00CD3F6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E73B614C2CAC3EAA00CD3F6F /* UserNotifications.framework */,
+				E73B614E2CAC3EAA00CD3F6F /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,10 +181,12 @@
 				E73B610E2CAC3E5600CD3F6F /* Sources */,
 				E73B610F2CAC3E5600CD3F6F /* Frameworks */,
 				E73B61102CAC3E5600CD3F6F /* Resources */,
+				E73B615E2CAC3EAA00CD3F6F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E73B61582CAC3EAA00CD3F6F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E73B61142CAC3E5600CD3F6F /* AppleNotificationExamples */,
@@ -176,6 +244,28 @@
 			productReference = E73B61322CAC3E5800CD3F6F /* AppleNotificationExamplesUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E73B61492CAC3EAA00CD3F6F /* MediaNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E73B615A2CAC3EAA00CD3F6F /* Build configuration list for PBXNativeTarget "MediaNotification" */;
+			buildPhases = (
+				E73B61462CAC3EAA00CD3F6F /* Sources */,
+				E73B61472CAC3EAA00CD3F6F /* Frameworks */,
+				E73B61482CAC3EAA00CD3F6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E73B61502CAC3EAA00CD3F6F /* MediaNotification */,
+			);
+			name = MediaNotification;
+			packageProductDependencies = (
+			);
+			productName = MediaNotification;
+			productReference = E73B614A2CAC3EAA00CD3F6F /* MediaNotification.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +287,9 @@
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = E73B61112CAC3E5600CD3F6F;
 					};
+					E73B61492CAC3EAA00CD3F6F = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = E73B610D2CAC3E5600CD3F6F /* Build configuration list for PBXProject "AppleNotificationExamples" */;
@@ -216,6 +309,7 @@
 				E73B61112CAC3E5600CD3F6F /* AppleNotificationExamples */,
 				E73B61272CAC3E5800CD3F6F /* AppleNotificationExamplesTests */,
 				E73B61312CAC3E5800CD3F6F /* AppleNotificationExamplesUITests */,
+				E73B61492CAC3EAA00CD3F6F /* MediaNotification */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +330,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E73B61302CAC3E5800CD3F6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E73B61482CAC3EAA00CD3F6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,6 +367,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E73B61462CAC3EAA00CD3F6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -278,6 +386,11 @@
 			isa = PBXTargetDependency;
 			target = E73B61112CAC3E5600CD3F6F /* AppleNotificationExamples */;
 			targetProxy = E73B61332CAC3E5800CD3F6F /* PBXContainerItemProxy */;
+		};
+		E73B61582CAC3EAA00CD3F6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E73B61492CAC3EAA00CD3F6F /* MediaNotification */;
+			targetProxy = E73B61572CAC3EAA00CD3F6F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -292,6 +405,7 @@
 				DEVELOPMENT_TEAM = 24B9M77K5B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleNotificationExamples/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Multi Notification";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +434,7 @@
 				DEVELOPMENT_TEAM = 24B9M77K5B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleNotificationExamples/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Multi Notification";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -529,6 +644,56 @@
 			};
 			name = Release;
 		};
+		E73B615B2CAC3EAA00CD3F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24B9M77K5B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MediaNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MediaNotification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Invenxen.AR.AppleNotificationExamples.MediaNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E73B615C2CAC3EAA00CD3F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24B9M77K5B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MediaNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MediaNotification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Invenxen.AR.AppleNotificationExamples.MediaNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,6 +729,15 @@
 			buildConfigurations = (
 				E73B61442CAC3E5800CD3F6F /* Debug */,
 				E73B61452CAC3E5800CD3F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E73B615A2CAC3EAA00CD3F6F /* Build configuration list for PBXNativeTarget "MediaNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E73B615B2CAC3EAA00CD3F6F /* Debug */,
+				E73B615C2CAC3EAA00CD3F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

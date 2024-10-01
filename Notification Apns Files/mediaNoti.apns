@@ -1,0 +1,12 @@
+{
+    "Simulator Target Bundle":"Invenxen.AR.AppleNotificationExamples",
+    "aps": {
+        "category": "myNotificationCategory",
+        "alert": {
+            "title": "Photos",
+            "body": "This is new Photo"
+        },
+        "mutable-content": 1
+    },
+    "urlImageString":"https://media.istockphoto.com/id/139713643/photo/loon-on-sharbot-lake.jpg?s=1024x1024&w=is&k=20&c=c8K6-TzoCcosKSatbnXOv63K86-W9yc_xt5g8wGUMlk="
+}

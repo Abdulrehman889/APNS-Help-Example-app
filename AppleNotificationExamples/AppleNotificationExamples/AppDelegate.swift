@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             }
             
-//            let actionButton = UNNotificationAction(identifier: "actionButton", title: "Action", options: [.foreground ])
-//            let deleteAction = UNNotificationAction(identifier: "deleteAction", title: "Delete", options: [.destructive])
-//            
-//            let notificationCategory = UNNotificationCategory(identifier: "myNotification Category", actions: [actionButton,deleteAction], intentIdentifiers: [], options: [])
-//            notifications.setNotificationCategories([notificationCategory])
+            let actionButton = UNNotificationAction(identifier: "actionButton", title: "Action", options: [.foreground ])
+            let deleteAction = UNNotificationAction(identifier: "deleteAction", title: "Delete", options: [.destructive])
+            
+            let notificationCategory = UNNotificationCategory(identifier: "myNotification Category", actions: [actionButton,deleteAction], intentIdentifiers: [], options: [])
+            notifications.setNotificationCategories([notificationCategory])
         }
     }
     
@@ -47,14 +47,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//        switch response.actionIdentifier {
-//        case "actionButton":
-//            print("Open")
-//        case "deleteAction ":
-//            print("Close")
-//        default:
-//            print("this is error case")
-//        }
+        switch response.actionIdentifier {
+        case "actionButton":
+            print("Open")
+        case "deleteAction ":
+            print("Close")
+        default:
+            print("this is error case")
+        }
         completionHandler()
     }
 }
